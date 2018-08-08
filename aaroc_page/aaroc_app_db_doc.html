@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <head>
 <title>Schema for database 'aaroc_app_db'</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8">
@@ -21,7 +21,7 @@ BR.page {page-break-after: always}
 </tr>
 </table>
 <a name="header">&nbsp</a><ul>
- 	<li><a href="#course_info"><p class="normal">course_info</a> 課程資訊 </li>
+  <li><a href="#course_info"><p class="normal">course_info</a> 課程資訊 </li>
 	<li><a href="#groups"><p class="normal">groups</a> 群組列表</li>
 	<li><a href="#groups_permission"><p class="normal">groups_permission</a> 群組對應權限表</li>
 	<li><a href="#management_link"><p class="normal">management_link</a> 管理連結</li>
@@ -34,7 +34,7 @@ BR.page {page-break-after: always}
 	<li><a href="#serv_type"><p class="normal">serv_type</a> 叫修類別</li>
 	<li><a href="#time_schedule"><p class="normal">time_schedule</a> 課表資訊</li>
 	<li><a href="#user"><p class="normal">user</a> 帳號資訊</li>
-	<li><a href="./pic/aaroc_app_db_relaction.jpg"> 關聯圖</a></li>
+	<li><a href="aaroc_app_db_relaction.jpg"> 關聯圖</a></li>
 </ul>
 <br class=page>
 <p><a name='course_info'>&nbsp</a>
@@ -118,17 +118,6 @@ BR.page {page-break-after: always}
 	<td align="left" valign="top"><p class="normal">是否必修 (0:選修 1:必修)</td>
 </tr>
 <tr>
-	<td align="left" valign="top"><p class="normal">class_no</td>
-	<td align="left" valign="top"><p class="normal">varchar(30)</td>
-	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
-	<td align="left" valign="top"><p class="normal">NO</td>
-	<td align="left" valign="top"><p class="normal">&nbsp;</td>
-	<td align="left" valign="top"><p class="normal">&nbsp;</td>
-	<td align="left" valign="top"><p class="normal">&nbsp;</td>
-	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
-	<td align="left" valign="top"><p class="normal">開課班別</td>
-</tr>
-<tr>
 	<td align="left" valign="top"><p class="normal">room_no</td>
 	<td align="left" valign="top"><p class="normal">varchar(10)</td>
 	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
@@ -138,17 +127,6 @@ BR.page {page-break-after: always}
 	<td align="left" valign="top"><p class="normal">&nbsp;</td>
 	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
 	<td align="left" valign="top"><p class="normal">教室編號</td>
-</tr>
-<tr>
-	<td align="left" valign="top"><p class="normal">lecturer_name</td>
-	<td align="left" valign="top"><p class="normal">varchar(30)</td>
-	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
-	<td align="left" valign="top"><p class="normal">NO</td>
-	<td align="left" valign="top"><p class="normal">&nbsp;</td>
-	<td align="left" valign="top"><p class="normal">&nbsp;</td>
-	<td align="left" valign="top"><p class="normal">&nbsp;</td>
-	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
-	<td align="left" valign="top"><p class="normal">講師名稱</td>
 </tr>
 <tr>
 	<td align="left" valign="top"><p class="normal">create_time</td>
@@ -847,7 +825,7 @@ BR.page {page-break-after: always}
 	<td align="left" valign="top"><p class="normal">1</td>
 	<td align="left" valign="top"><p class="normal">news_id</td>
 	<td align="left" valign="top"><p class="normal">A</td>
-	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">0</td>
 	<td align="left" valign="top"><p class="normal">(NULL)</td>
 	<td align="left" valign="top"><p class="normal">(NULL)</td>
 	<td align="left" valign="top"><p class="normal">&nbsp;</td>
@@ -1930,6 +1908,17 @@ BR.page {page-break-after: always}
 	<td align="left" valign="top"><p class="normal">&nbsp;</td>
 	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
 	<td align="left" valign="top"><p class="normal">星期序號(星期一: 1 星期二: 2)</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">room_no</td>
+	<td align="left" valign="top"><p class="normal">varchar(10)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">教室編號</td>
 </tr>
 <tr>
 	<td align="left" valign="top"><p class="normal">course_code</td>
