@@ -1,1 +1,2 @@
 docker run --name mysqldb -v ~/docker-file/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 13306:3306 mysql
+docker update --restart=always --name mysqldb -v ~/docker-file/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 13306:3306 mysql
