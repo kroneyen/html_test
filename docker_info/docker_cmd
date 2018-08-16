@@ -1,2 +1,30 @@
+1. krone-nb
 docker run --name mysqldb -v ~/docker-file/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 13306:3306 mysql
-docker update --restart=always --name mysqldb -v ~/docker-file/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 13306:3306 mysql
+docker update --restart=always mysqldb 
+
+
+2.work-pc
+
+docker run --name mysqldb -v ~/docker/mysql/data:/var/lib/mysql -v ~/docker/mysql/conf/my.cnf:/etc/mysql/my.cnf -e MYSQL_ROOT_PASSWORD=123456 -p 13306:3306 -d mysql
+
+
+3.check volume mapping on host
+
+ docker inspect -f '{{.Mounts}}' 4c2a9ef663c2
+ 
+ 
+ #### dockerfile  test 
+ 
+ docker build -t "simple_flask:dockerfile" 
+ 
+ docker build -t my_mysqldb:1.0 .
+ 
+ docker run --name mysqldb_1  my_mysqldb
+ 
+ 
+ docker run --name mysqldb_1 -v ~/docker/mysql_1/data:/var/lib/mysql -v ~/docker/mysql_1/conf/my.cnf:/etc/mysql/my.cnf -e MYSQL_ROOT_PASSWORD=123456 -p 13306:3306 -d mysql
+ 
+ 
+ docker run --name mysqldb_1  -it -v ~/docker/mysql_1/data:/var/lib/mysql -v ~/docker/mysql_1/conf/my.cnf:/etc/mysql/my.cnf -p 23306:3306 -d my_mysqldb:1.0
+ 
+ 

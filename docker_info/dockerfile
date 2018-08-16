@@ -1,0 +1,26 @@
+﻿FROM mysql:latest
+
+
+### setting pwd 
+
+ENV MYSQL_ROOT_PASSWORD=123456
+ENV MYSQL_DATABASE=aaroc_app_db
+ENV MYSQL_USER=dba
+ENV MYSQL_PASSWORD=dbadba
+#VOLUME ["~/docker/mysql_1/data","/var/lib/mysql"]
+
+COPY conf/my.cnf /etc/mysql/my.cnf
+ADD conf/db.sql /docker-entrypoint-initdb.d
+
+#ENV MYSQL_DATABASE=mysql   
+#COPY conf/privileges.sql /docker-entrypoint-initdb.d
+
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y  vim
+
+
+# Define default command.
+#EXPOSE 3306
+
+# Display Greeting
+#CMD [ "mysqld"]
