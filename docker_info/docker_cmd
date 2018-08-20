@@ -28,3 +28,11 @@ docker run --name mysqldb -v ~/docker/mysql/data:/var/lib/mysql -v ~/docker/mysq
  docker run --name mysqldb_1  -it -v ~/docker/mysql_1/data:/var/lib/mysql -v ~/docker/mysql_1/conf/my.cnf:/etc/mysql/my.cnf -p 23306:3306 -d my_mysqldb:1.0
  
  
+ #### python3
+ 
+docker build -t python3:1.0 . --no-cache=true
+
+docker run --name mypython -it --restart=always -v ~/docker/python3/python_dir:/root/python_dir -d python3:1.0
+
+docker exec -it mypython  /bin/bash
+ 

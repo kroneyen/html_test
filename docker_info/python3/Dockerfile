@@ -1,16 +1,25 @@
-﻿FROM centos:latest
+FROM centos:latest
 
 ### setting  OS LANG && python folder 
-RUN export LANG="en_US.UTF-8" 
-RUN mkdir /root/python_dir
+
+ENV LANG en_US.UTF-8 
+ENV work_conf  /root/python_conf/
+RUN mkdir -p $work_conf
+
+
+### create work folder 
+WORKDIR $work_conf
 
 ### adding google-chrome.repo mapping 
-ADD conf/google-chrome.repo /etc/yum.repos.d/ 
-ADD conf/contab_default.sh /root/python_dir/
-ADD conf/random_range.sh /root/python_dir/
-ADD conf/req.txt /root/python_dir/
+COPY conf/google-chrome.repo /etc/yum.repos.d/ 
+COPY conf/crontab_default.sh conf/random_range.sh conf/req.txt $work_conf
+#COPY conf/random_range.sh $work_conf
+#COPY conf/req.txt $work_conf
+#COPY conf/random_range.sh /root/python_dir/
+#COPY conf/req.txt /root/python_dir/
 
 ### install OS && chrome  package
+
 RUN yum update -y 
 RUN yum install -y yum-utils \
     wget \
@@ -18,43 +27,30 @@ RUN yum install -y yum-utils \
     zip \
     unzip \
     crontabs \
-    google-chrome-stable 
+    google-chrome-stable \
+    https://centos7.iuscommunity.org/ius-release.rpm
 
-RUN yum groupinstall -y 'Development Tools' 
-RUN yum install -y https://centos7.iuscommunity.org/ius-release.rpm 
-#RUN yum update 
-    
+
+#RUN yum install -y https://centos7.iuscommunity.org/ius-release.rpm 
 
 ### install  python 3X & pip 
 RUN yum install -y python36u \
     python36u-pip \
-    python36u-libs 
-
-
-### update default 2.7 pip to pip 18.0 
-#RUN pip3.6 install --upgrade pip  ## from 9.1 to 10.1   
-#RUN pip3.6 install --upgrade pip ## from 10.1 to 18.0
-    
+    python36u-libs \
+    python36u-setuptool
 
 ### install python module 
-#RUN pip3.6 install -U pip \
-#    selenium \
-#    pyvirtualdisplay \
-#    requests \
-#    beautifulsoup4 \
-#    setuptools 
-RUN pip3.6 install -r /root/python_dir/req.txt
 
-### install chromedriver  && setting PATH
+RUN pip3.6 install -r req.txt
+
+### install chromedriver  && setting PATH ChromeDriver 2.41
 RUN wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip 
-RUN unzip chromedriver_linux64.zip -d /usr/bin 
-RUN cp /usr/bin/chromedriver /usr/local/bin/  ## dev evn static path for crontab
+RUN unzip chromedriver_linux64.zip 
+RUN cp chromedriver /usr/bin/; cp chromedriver /usr/local/bin 
 
 
 ### adding --no-sandbox avoid chrome : unknown error: DevToolsActivePort file doesn't exist    
-RUN sed -i 's/exec -a "$0" "$HERE\/chrome" "$@"'/'exec -a "$0" "$HERE\/chrome" "$@" --no-sandbox/g' \
-     /usr/bin/google-chrome 
+RUN sed -i 's/exec -a "$0" "$HERE\/chrome" "$@"'/'exec -a "$0" "$HERE\/chrome" "$@" --no-sandbox/g' /usr/bin/google-chrome 
 
 ### execute python contable 
-RUN /root/python_dir/contab_default.sh
-#CMD ["/bin/sh","/root/python_dir/contab_default.sh"]
+RUN /bin/sh crontab_default.sh
