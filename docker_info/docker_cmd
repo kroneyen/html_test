@@ -23,9 +23,9 @@ docker run --name mysqldb -v ~/docker/mysql/data:/var/lib/mysql -v ~/docker/mysq
  
  
  docker run --name mysqldb_1 -v ~/docker/mysql_1/data:/var/lib/mysql -v ~/docker/mysql_1/conf/my.cnf:/etc/mysql/my.cnf -e MYSQL_ROOT_PASSWORD=123456 -p 13306:3306 -d mysql
- 
- 
- docker run --name mysqldb_1  -it -v ~/docker/mysql_1/data:/var/lib/mysql -v ~/docker/mysql_1/conf/my.cnf:/etc/mysql/my.cnf -p 23306:3306 -d my_mysqldb:1.0
+ docker run --name mysqldb_1 -v ~/docker/mysql_1/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -p 23306:3306 --default-authentication-plugin=mysql_native_password -d mysql 
+   
+ docker run --name mysqldb_1  -it -v ~/docker/mysql_1/data:/var/lib/mysql  -p 23306:3306 -d mysqldb:1.0 --default-authentication-plugin=mysql_native_password
  
  
  #### python3
@@ -37,4 +37,20 @@ docker run --name mypython -it --restart=always -v ~/docker/python3/python_dir:/
 docker exec -it mypython  /bin/bash 
 
 ## remove google-chrome  && install google-chrome-stable
+
+
+### lnmp 
+
+docker run --name alipay -it --restart=always -v ~/docker/alipay:/usr/share/www -p 1180:80 -d imagine10255/centos6-lnmp-php56
+ 
+ 
+### network mode 
+
+Bridge Mode (default)  -- docker0
+
+Host Mode : --net=host   與host相同 
+None Mode : --net=host    獨立ip網段  沒有network interface  
+Container Mode :  --net=container:d16d87a29be3  與某個contaner Namespace 內
+ 
+
  
