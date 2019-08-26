@@ -1,0 +1,135 @@
+﻿<table class="table_head_top" border="0" cellpadding="0" cellspacing="0" width="100%">
+<thead>
+<tr>
+<td class="head_td" scope="col">日期</td>
+<td class=" head_td right" scope="col">即期買匯</td>
+<td class=" head_td right" scope="col">現金買匯</td>
+<td class=" head_td right" scope="col">即期賣匯</td>
+<td class=" head_td right" scope="col">現金賣匯</td>
+<td class="head_td" scope="col">　　　　　</td>
+</tr>
+</thead>
+<tbody>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor1'" onblur="this.className='tbcolor1'" class="tbcolor1">
+<td class="con_td">2019/05/02</td>
+<td class="con_td money_td">0.2752</td>
+<td class="con_td money_td">0.2680</td>
+<td class="con_td money_td">0.2793</td>
+<td class="con_td money_td">0.2807</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor2'" onblur="this.className='tbcolor2'" class="tbcolor2">
+<td class="con_td">2019/05/03</td>
+<td class="con_td money_td">0.2753</td>
+<td class="con_td money_td">0.2681</td>
+<td class="con_td money_td">0.2794</td>
+<td class="con_td money_td">0.2808</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor1'" onblur="this.className='tbcolor1'" class="tbcolor1">
+<td class="con_td">2019/05/06</td>
+<td class="con_td money_td">0.2773</td>
+<td class="con_td money_td">0.2701</td>
+<td class="con_td money_td">0.2814</td>
+<td class="con_td money_td">0.2828</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor2'" onblur="this.className='tbcolor2'" class="tbcolor2">
+<td class="con_td">2019/05/07</td>
+<td class="con_td money_td">0.2774</td>
+<td class="con_td money_td">0.2702</td>
+<td class="con_td money_td">0.2815</td>
+<td class="con_td money_td">0.2829</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor1'" onblur="this.className='tbcolor1'" class="tbcolor1">
+<td class="con_td">2019/05/08</td>
+<td class="con_td money_td">0.2788</td>
+<td class="con_td money_td">0.2716</td>
+<td class="con_td money_td">0.2829</td>
+<td class="con_td money_td">0.2843</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor2'" onblur="this.className='tbcolor2'" class="tbcolor2">
+<td class="con_td">2019/05/09</td>
+<td class="con_td money_td">0.2804</td>
+<td class="con_td money_td">0.2732</td>
+<td class="con_td money_td">0.2845</td>
+<td class="con_td money_td">0.2859</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor1'" onblur="this.className='tbcolor1'" class="tbcolor1">
+<td class="con_td">2019/05/10</td>
+<td class="con_td money_td">0.2801</td>
+<td class="con_td money_td">0.2729</td>
+<td class="con_td money_td">0.2842</td>
+<td class="con_td money_td">0.2856</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor2'" onblur="this.className='tbcolor2'" class="tbcolor2">
+<td class="con_td">2019/05/13</td>
+<td class="con_td money_td">0.2815</td>
+<td class="con_td money_td">0.2743</td>
+<td class="con_td money_td">0.2856</td>
+<td class="con_td money_td">0.2870</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor1'" onblur="this.className='tbcolor1'" class="tbcolor1">
+<td class="con_td">2019/05/14</td>
+<td class="con_td money_td">0.2818</td>
+<td class="con_td money_td">0.2746</td>
+<td class="con_td money_td">0.2859</td>
+<td class="con_td money_td">0.2873</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor2'" onblur="this.className='tbcolor2'" class="tbcolor2">
+<td class="con_td">2019/05/15</td>
+<td class="con_td money_td">0.2821</td>
+<td class="con_td money_td">0.2749</td>
+<td class="con_td money_td">0.2862</td>
+<td class="con_td money_td">0.2876</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor1'" onblur="this.className='tbcolor1'" class="tbcolor1">
+<td class="con_td">2019/05/16</td>
+<td class="con_td money_td">0.2828</td>
+<td class="con_td money_td">0.2756</td>
+<td class="con_td money_td">0.2869</td>
+<td class="con_td money_td">0.2883</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor2'" onblur="this.className='tbcolor2'" class="tbcolor2">
+<td class="con_td">2019/05/17</td>
+<td class="con_td money_td">0.2832</td>
+<td class="con_td money_td">0.2760</td>
+<td class="con_td money_td">0.2873</td>
+<td class="con_td money_td">0.2887</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor1'" onblur="this.className='tbcolor1'" class="tbcolor1">
+<td class="con_td">2019/05/20</td>
+<td class="con_td money_td">0.2831</td>
+<td class="con_td money_td">0.2759</td>
+<td class="con_td money_td">0.2872</td>
+<td class="con_td money_td">0.2886</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor2'" onblur="this.className='tbcolor2'" class="tbcolor2">
+<td class="con_td">2019/05/21</td>
+<td class="con_td money_td">0.2837</td>
+<td class="con_td money_td">0.2765</td>
+<td class="con_td money_td">0.2878</td>
+<td class="con_td money_td">0.2892</td>
+<td class="con_td">　</td>
+</tr>
+<tr onmouseover="this.className='tbcolor3'" onfocus="this.className='tbcolor3'" onmouseout="this.className='tbcolor1'" onblur="this.className='tbcolor1'" class="tbcolor1">
+<td class="con_td">2019/05/22</td>
+<td class="con_td money_td">0.2836</td>
+<td class="con_td money_td">0.2764</td>
+<td class="con_td money_td">0.2877</td>
+<td class="con_td money_td">0.2891</td>
+<td class="con_td">　</td>
+</tr>
+</tbody>
+</table>
+

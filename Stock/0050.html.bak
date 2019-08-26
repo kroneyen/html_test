@@ -1,0 +1,208 @@
+﻿<table id="allpcf" width="100%" border="0" cellspacing="0" cellpadding="1">
+          <tbody>
+            <tr>
+              <td bgcolor="#777777">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td align="center" bgcolor="#FFFFFF">
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td style="font-weight: bolder; line-height: 30px; font-size: 16px; color: #783f17; background-color: #fcd2b2; font-family: '細明體'; text-align: center;">ETF股票期貨權重</td>
+                            </tr>
+                            <tr>
+                              <td align="left" valign="top" bgcolor="#FFFFFF" style="text-align: center;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><img src="./Content/images/10_10.png" alt="" width="10" height="10"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td width="25">&nbsp;</td>
+                                      <td>
+                                        <table width="100%" class="tab-border" cellspacing="1" cellpadding="0">
+                                          <tbody>
+                                            <tr class="">
+                                              <td colspan="2" align="center" bgcolor="#f2e0d3" class="Table_MainTitle ng-binding">
+                                                 詳細基金成分股
+                                                <span class="word ng-binding">
+                                                  //
+                                                </span>
+                                                <button style="float: right;border-radius:5px" ng-click="exportExcel('allpcf', '現金申購買回清單', fundid);">
+                                                  <img width="23" src="./Content/images/excel-icon.png">
+                                                </button>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <table id="fundweights" cellspacing="0" cellpadding="4" border="1" style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+                                                  <tbody><tr class="table_Minortitle2">
+                                                    <td colspan="2" bgcolor="#7A6B5F">基金資產</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td width="60%" align="center" bgcolor="#E7E3E0"><span class="Table_text1">基金資產淨值</span></td>
+                                                    <td width="40%" align="right" bgcolor="#f9f4e1"><span class="Table_text1 ng-binding">NTD$</span></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align="center" bgcolor="#EEECEA"><span class="Table_text1">基金在外流通單位數(單位)</span></td>
+                                                    <td align="right" bgcolor="#FFFFFF"><span class="Table_text1 ng-binding"></span></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align="center" bgcolor="#E7E3E0"><span class="Table_text1">基金每單位淨值</span></td>
+                                                    <td align="right" bgcolor="#f9f4e1"><span class="Table_text1 ng-binding">NTD$</span></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td colspan="2">
+                                                      <p></p>
+                                                    </td>
+                                                  </tr>
+                                                  <tr class="table_Minortitle2">
+                                                    <td bgcolor="#7A6B5F">項目</td>
+                                                    <td bgcolor="#7A6B5F">
+                                                      <!-- ngIf: !showLR --><span ng-if="!showLR" class="ng-scope">權重(%)</span><!-- end ngIf: !showLR -->
+                                                      <!-- ngIf: showLR -->
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align="center" bgcolor="#E7E3E0"><span class="Table_text1">股票</span></td>
+                                                    <td align="right" bgcolor="#f9f4e1">
+                                                      <!-- ngIf: !showLR --><span class="Table_text1 ng-binding ng-scope" ng-if="!showLR"></span><!-- end ngIf: !showLR -->
+                                                      <!-- ngIf: showLR -->
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align="center" bgcolor="#EEECEA"><span class="Table_text1">期貨</span></td>
+                                                    <td align="right" bgcolor="#FFFFFF">
+                                                      <!-- ngIf: !showLR --><span class="Table_text1 ng-binding ng-scope" ng-if="!showLR"></span><!-- end ngIf: !showLR -->
+                                                      <!-- ngIf: showLR -->
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align="center" bgcolor="#E7E3E0"><span class="Table_text1">ETF</span></td>
+                                                    <td align="right" bgcolor="#f9f4e1">
+                                                      <!-- ngIf: !showLR --><span class="Table_text1 ng-binding ng-scope" ng-if="!showLR"></span><!-- end ngIf: !showLR -->
+                                                      <!-- ngIf: showLR -->
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align="center" bgcolor="#E7E3E0"><span class="Table_text1">債券</span></td>
+                                                    <td align="right" bgcolor="#f9f4e1">
+                                                      <!-- ngIf: !showLR --><span class="Table_text1 ng-binding ng-scope" ng-if="!showLR"></span><!-- end ngIf: !showLR -->
+                                                      <!-- ngIf: showLR -->
+                                                    </td>
+                                                  </tr>
+                                                </tbody></table>
+                                                <p></p>
+                                                <!-- ngIf: showLR -->
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                      <td width="25">&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <p></p>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td width="25">&nbsp;</td>
+                                      <td class="icon_Dashed">&nbsp;</td>
+                                      <td width="10">&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!-- ngIf: stkWeights.length>0 && showStksWeight -->
+                                <!-- ngIf: etfWeights.length>0 -->
+                                <!-- ngIf: futWeights.length>0 -->
+                                <!-- ngIf: bondWeights.length!=0 --><div ng-if="bondWeights.length!=0" class="ng-scope">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                      <tr>
+                                        <td width="25">&nbsp;</td>
+                                        <td>
+                                          <table id="bondweight" width="100%" class="tab-border" cellspacing="1" cellpadding="0">
+                                            <tbody>
+                                              <tr>
+                                                <td colspan="4" align="center" bgcolor="#f2e0d3" class="Table_MainTitle">
+                                                  債券
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <table id="bondweights" cellspacing="0" cellpadding="4" border="1" style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+                                                    <tbody><tr class="table_Minortitle2">
+                                                      <td width="15%" bgcolor="#7A6B5F">債券代碼</td>
+                                                      <td width="40%" bgcolor="#7A6B5F">債券名稱</td>
+                                                      <td width="15%" bgcolor="#7A6B5F">面額</td>
+                                                      <td width="20%" bgcolor="#7A6B5F">市值</td>
+                                                      <td width="10%" bgcolor="#7A6B5F">權重(%)</td>
+                                                    </tr>
+                                                    <!-- ngRepeat: b in bondWeights -->
+                                                  </tbody></table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                        <td width="25">&nbsp;</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div><!-- end ngIf: bondWeights.length!=0 -->
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><img src="./Content/images/10_10.png" alt="" width="10" height="10"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td width="25" valign="middle" class="">
+                                        <p>
+                                          <br>
+                                          <br>
+                                        </p>
+                                      </td>
+                                      <td align="left" valign="middle" text-justify="newspaper">
+                                        <p class="YText4">
+                                          ＊欲進一步了解ETF申購與買回機制及相關實務知識，請至<a href="0401.html">法人專區</a>。
+                                        </p>
+                                      </td>
+                                      <td width="25" valign="middle">
+                                        <p>&nbsp;</p>
+                                        <p>&nbsp;</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" class="ContactUS">
+                                        <a href="https://www.yuantafunds.com/service-center/contact-us">如有相關問題歡迎聯絡我們</a>
+                                        <span style="padding: 10px; font-weight: bold; text-align: center"></span>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>

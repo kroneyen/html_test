@@ -1,0 +1,543 @@
+﻿<table id="allpcf" width="100%" border="0" cellspacing="0" cellpadding="1">
+          <tbody>
+            <tr>
+              <td bgcolor="#777777">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td align="center" bgcolor="#FFFFFF">
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td style="font-weight: bolder; line-height: 30px; font-size: 16px; color: #783f17; background-color: #fcd2b2; font-family: '細明體'; text-align: center;">ETF股票期貨權重</td>
+                            </tr>
+                            <tr>
+                              <td align="left" valign="top" bgcolor="#FFFFFF" style="text-align: center;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><img src="./Content/images/10_10.png" alt="" width="10" height="10"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td width="25">&nbsp;</td>
+                                      <td>
+                                        <table width="100%" class="tab-border" cellspacing="1" cellpadding="0">
+                                          <tbody>
+                                            <tr class="">
+                                              <td colspan="2" align="center" bgcolor="#f2e0d3" class="Table_MainTitle ng-binding">
+                                                元大台灣卓越50基金 詳細基金成分股
+                                                <span class="word ng-binding">
+                                                  2019/06/03
+                                                </span>
+                                                <button style="float: right;border-radius:5px" ng-click="exportExcel('allpcf', '現金申購買回清單', fundid);">
+                                                  <img width="23" src="./Content/images/excel-icon.png">
+                                                </button>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <table id="fundweights" cellspacing="0" cellpadding="4" border="1" style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+                                                  <tbody><tr class="table_Minortitle2">
+                                                    <td colspan="2" bgcolor="#7A6B5F">基金資產</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td width="60%" align="center" bgcolor="#E7E3E0"><span class="Table_text1">基金資產淨值</span></td>
+                                                    <td width="40%" align="right" bgcolor="#f9f4e1"><span class="Table_text1 ng-binding">NTD$65,151,938,546.00</span></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align="center" bgcolor="#EEECEA"><span class="Table_text1">基金在外流通單位數(單位)</span></td>
+                                                    <td align="right" bgcolor="#FFFFFF"><span class="Table_text1 ng-binding">827,500,000</span></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align="center" bgcolor="#E7E3E0"><span class="Table_text1">基金每單位淨值</span></td>
+                                                    <td align="right" bgcolor="#f9f4e1"><span class="Table_text1 ng-binding">NTD$78.73</span></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td colspan="2">
+                                                      <p></p>
+                                                    </td>
+                                                  </tr>
+                                                  <tr class="table_Minortitle2">
+                                                    <td bgcolor="#7A6B5F">項目</td>
+                                                    <td bgcolor="#7A6B5F">
+                                                      <!-- ngIf: !showLR --><span ng-if="!showLR" class="ng-scope">權重(%)</span><!-- end ngIf: !showLR -->
+                                                      <!-- ngIf: showLR -->
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align="center" bgcolor="#E7E3E0"><span class="Table_text1">股票</span></td>
+                                                    <td align="right" bgcolor="#f9f4e1">
+                                                      <!-- ngIf: !showLR --><span class="Table_text1 ng-binding ng-scope" ng-if="!showLR">99.47</span><!-- end ngIf: !showLR -->
+                                                      <!-- ngIf: showLR -->
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align="center" bgcolor="#EEECEA"><span class="Table_text1">期貨</span></td>
+                                                    <td align="right" bgcolor="#FFFFFF">
+                                                      <!-- ngIf: !showLR --><span class="Table_text1 ng-binding ng-scope" ng-if="!showLR">0.50</span><!-- end ngIf: !showLR -->
+                                                      <!-- ngIf: showLR -->
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align="center" bgcolor="#E7E3E0"><span class="Table_text1">ETF</span></td>
+                                                    <td align="right" bgcolor="#f9f4e1">
+                                                      <!-- ngIf: !showLR --><span class="Table_text1 ng-binding ng-scope" ng-if="!showLR">0.00</span><!-- end ngIf: !showLR -->
+                                                      <!-- ngIf: showLR -->
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align="center" bgcolor="#E7E3E0"><span class="Table_text1">債券</span></td>
+                                                    <td align="right" bgcolor="#f9f4e1">
+                                                      <!-- ngIf: !showLR --><span class="Table_text1 ng-binding ng-scope" ng-if="!showLR">0.00</span><!-- end ngIf: !showLR -->
+                                                      <!-- ngIf: showLR -->
+                                                    </td>
+                                                  </tr>
+                                                </tbody></table>
+                                                <p></p>
+                                                <!-- ngIf: showLR -->
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                      <td width="25">&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <p></p>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td width="25">&nbsp;</td>
+                                      <td class="icon_Dashed">&nbsp;</td>
+                                      <td width="10">&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!-- ngIf: stkWeights.length>0 && showStksWeight --><div ng-if="stkWeights.length>0 &amp;&amp; showStksWeight" class="ng-scope">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                      <tr>
+                                        <td width="25">&nbsp;</td>
+                                        <td>
+                                          <table width="100%" class="tab-border" cellspacing="1" cellpadding="0">
+                                            <tbody>
+                                              <tr class="">
+                                                <td colspan="4" align="center" bgcolor="#f2e0d3" class="Table_MainTitle">
+                                                  股票
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <table id="stockweights" cellspacing="0" cellpadding="4" border="1" style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+                                                    <tbody><tr class="table_Minortitle2">
+                                                      <td width="20%" bgcolor="#7A6B5F">證券代碼</td>
+                                                      <td width="35%" bgcolor="#7A6B5F">證券名稱</td>
+                                                      <td width="20%" bgcolor="#7A6B5F">持股權重(%)</td>
+                                                      <td width="25%" bgcolor="#7A6B5F">股數</td>
+                                                    </tr>
+                                                    <!-- ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">1101</td>
+                                                      <td align="center" class="ng-binding">台泥</td>
+                                                      <td align="right" class="ng-binding">1.19</td>
+                                                      <td align="right" class="ng-binding">17,319,105</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">1102</td>
+                                                      <td align="center" class="ng-binding">亞泥</td>
+                                                      <td align="right" class="ng-binding">0.64</td>
+                                                      <td align="right" class="ng-binding">8,908,009</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">1216</td>
+                                                      <td align="center" class="ng-binding">統一</td>
+                                                      <td align="right" class="ng-binding">2.35</td>
+                                                      <td align="right" class="ng-binding">18,410,948</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">1301</td>
+                                                      <td align="center" class="ng-binding">台塑</td>
+                                                      <td align="right" class="ng-binding">3.23</td>
+                                                      <td align="right" class="ng-binding">18,700,837</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">1303</td>
+                                                      <td align="center" class="ng-binding">南亞</td>
+                                                      <td align="right" class="ng-binding">2.68</td>
+                                                      <td align="right" class="ng-binding">21,683,712</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">1326</td>
+                                                      <td align="center" class="ng-binding">台化</td>
+                                                      <td align="right" class="ng-binding">2.21</td>
+                                                      <td align="right" class="ng-binding">13,148,092</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">1402</td>
+                                                      <td align="center" class="ng-binding">遠東新</td>
+                                                      <td align="right" class="ng-binding">0.78</td>
+                                                      <td align="right" class="ng-binding">15,067,284</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2002</td>
+                                                      <td align="center" class="ng-binding">中鋼</td>
+                                                      <td align="right" class="ng-binding">1.81</td>
+                                                      <td align="right" class="ng-binding">47,477,301</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2105</td>
+                                                      <td align="center" class="ng-binding">正新</td>
+                                                      <td align="right" class="ng-binding">0.44</td>
+                                                      <td align="right" class="ng-binding">7,041,219</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2207</td>
+                                                      <td align="center" class="ng-binding">和泰車</td>
+                                                      <td align="right" class="ng-binding">0.97</td>
+                                                      <td align="right" class="ng-binding">1,225,288</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2301</td>
+                                                      <td align="center" class="ng-binding">光寶科</td>
+                                                      <td align="right" class="ng-binding">0.59</td>
+                                                      <td align="right" class="ng-binding">8,167,577</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2303</td>
+                                                      <td align="center" class="ng-binding">聯電</td>
+                                                      <td align="right" class="ng-binding">0.93</td>
+                                                      <td align="right" class="ng-binding">44,754,358</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2308</td>
+                                                      <td align="center" class="ng-binding">台達電</td>
+                                                      <td align="right" class="ng-binding">1.94</td>
+                                                      <td align="right" class="ng-binding">8,296,660</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2317</td>
+                                                      <td align="center" class="ng-binding">鴻海</td>
+                                                      <td align="right" class="ng-binding">5.30</td>
+                                                      <td align="right" class="ng-binding">45,828,907</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2327</td>
+                                                      <td align="center" class="ng-binding">國巨</td>
+                                                      <td align="right" class="ng-binding">0.63</td>
+                                                      <td align="right" class="ng-binding">1,515,498</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2330</td>
+                                                      <td align="center" class="ng-binding">台積電</td>
+                                                      <td align="right" class="ng-binding">34.61</td>
+                                                      <td align="right" class="ng-binding">92,219,116</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2357</td>
+                                                      <td align="center" class="ng-binding">華碩</td>
+                                                      <td align="right" class="ng-binding">0.92</td>
+                                                      <td align="right" class="ng-binding">2,708,690</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2382</td>
+                                                      <td align="center" class="ng-binding">廣達</td>
+                                                      <td align="right" class="ng-binding">0.94</td>
+                                                      <td align="right" class="ng-binding">10,217,638</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2395</td>
+                                                      <td align="center" class="ng-binding">研華</td>
+                                                      <td align="right" class="ng-binding">0.58</td>
+                                                      <td align="right" class="ng-binding">1,426,165</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2408</td>
+                                                      <td align="center" class="ng-binding">南亞科</td>
+                                                      <td align="right" class="ng-binding">0.31</td>
+                                                      <td align="right" class="ng-binding">3,145,766</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2409</td>
+                                                      <td align="center" class="ng-binding">友達</td>
+                                                      <td align="right" class="ng-binding">0.49</td>
+                                                      <td align="right" class="ng-binding">33,798,479</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2412</td>
+                                                      <td align="center" class="ng-binding">中華電</td>
+                                                      <td align="right" class="ng-binding">2.60</td>
+                                                      <td align="right" class="ng-binding">14,606,381</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2454</td>
+                                                      <td align="center" class="ng-binding">聯發科</td>
+                                                      <td align="right" class="ng-binding">2.80</td>
+                                                      <td align="right" class="ng-binding">5,650,591</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2474</td>
+                                                      <td align="center" class="ng-binding">可成</td>
+                                                      <td align="right" class="ng-binding">0.86</td>
+                                                      <td align="right" class="ng-binding">2,834,704</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2633</td>
+                                                      <td align="center" class="ng-binding">台灣高鐵</td>
+                                                      <td align="right" class="ng-binding">0.57</td>
+                                                      <td align="right" class="ng-binding">8,002,609</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2801</td>
+                                                      <td align="center" class="ng-binding">彰銀</td>
+                                                      <td align="right" class="ng-binding">0.74</td>
+                                                      <td align="right" class="ng-binding">23,518,388</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2823</td>
+                                                      <td align="center" class="ng-binding">中壽</td>
+                                                      <td align="right" class="ng-binding">0.37</td>
+                                                      <td align="right" class="ng-binding">9,966,954</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2880</td>
+                                                      <td align="center" class="ng-binding">華南金</td>
+                                                      <td align="right" class="ng-binding">1.09</td>
+                                                      <td align="right" class="ng-binding">33,011,236</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2881</td>
+                                                      <td align="center" class="ng-binding">富邦金</td>
+                                                      <td align="right" class="ng-binding">1.94</td>
+                                                      <td align="right" class="ng-binding">28,211,677</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2882</td>
+                                                      <td align="center" class="ng-binding">國泰金</td>
+                                                      <td align="right" class="ng-binding">1.96</td>
+                                                      <td align="right" class="ng-binding">30,274,435</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2883</td>
+                                                      <td align="center" class="ng-binding">開發金</td>
+                                                      <td align="right" class="ng-binding">0.78</td>
+                                                      <td align="right" class="ng-binding">53,356,341</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2884</td>
+                                                      <td align="center" class="ng-binding">玉山金</td>
+                                                      <td align="right" class="ng-binding">1.69</td>
+                                                      <td align="right" class="ng-binding">39,460,462</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2885</td>
+                                                      <td align="center" class="ng-binding">元大金</td>
+                                                      <td align="right" class="ng-binding">1.22</td>
+                                                      <td align="right" class="ng-binding">42,998,034</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2886</td>
+                                                      <td align="center" class="ng-binding">兆豐金</td>
+                                                      <td align="right" class="ng-binding">2.04</td>
+                                                      <td align="right" class="ng-binding">41,807,531</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2887</td>
+                                                      <td align="center" class="ng-binding">台新金</td>
+                                                      <td align="right" class="ng-binding">0.85</td>
+                                                      <td align="right" class="ng-binding">38,004,191</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2890</td>
+                                                      <td align="center" class="ng-binding">永豐金</td>
+                                                      <td align="right" class="ng-binding">0.78</td>
+                                                      <td align="right" class="ng-binding">40,279,901</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2891</td>
+                                                      <td align="center" class="ng-binding">中信金</td>
+                                                      <td align="right" class="ng-binding">2.30</td>
+                                                      <td align="right" class="ng-binding">69,677,014</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">2892</td>
+                                                      <td align="center" class="ng-binding">第一金</td>
+                                                      <td align="right" class="ng-binding">1.32</td>
+                                                      <td align="right" class="ng-binding">37,347,352</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">2912</td>
+                                                      <td align="center" class="ng-binding">統一超</td>
+                                                      <td align="right" class="ng-binding">1.03</td>
+                                                      <td align="right" class="ng-binding">2,155,502</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">3008</td>
+                                                      <td align="center" class="ng-binding">大立光</td>
+                                                      <td align="right" class="ng-binding">2.32</td>
+                                                      <td align="right" class="ng-binding">393,166</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">3045</td>
+                                                      <td align="center" class="ng-binding">台灣大</td>
+                                                      <td align="right" class="ng-binding">1.14</td>
+                                                      <td align="right" class="ng-binding">6,118,661</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">3481</td>
+                                                      <td align="center" class="ng-binding">群創</td>
+                                                      <td align="right" class="ng-binding">0.39</td>
+                                                      <td align="right" class="ng-binding">33,056,984</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">3711</td>
+                                                      <td align="center" class="ng-binding">日月光投控</td>
+                                                      <td align="right" class="ng-binding">1.23</td>
+                                                      <td align="right" class="ng-binding">12,954,820</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">4904</td>
+                                                      <td align="center" class="ng-binding">遠傳</td>
+                                                      <td align="right" class="ng-binding">0.76</td>
+                                                      <td align="right" class="ng-binding">6,135,391</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">4938</td>
+                                                      <td align="center" class="ng-binding">和碩</td>
+                                                      <td align="right" class="ng-binding">0.62</td>
+                                                      <td align="right" class="ng-binding">7,694,913</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">5871</td>
+                                                      <td align="center" class="ng-binding">中租-KY</td>
+                                                      <td align="right" class="ng-binding">0.84</td>
+                                                      <td align="right" class="ng-binding">4,532,968</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">5876</td>
+                                                      <td align="center" class="ng-binding">上海商銀</td>
+                                                      <td align="right" class="ng-binding">1.05</td>
+                                                      <td align="right" class="ng-binding">11,515,622</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">5880</td>
+                                                      <td align="center" class="ng-binding">合庫金</td>
+                                                      <td align="right" class="ng-binding">1.12</td>
+                                                      <td align="right" class="ng-binding">34,774,978</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firsteven">6505</td>
+                                                      <td align="center" class="ng-binding">台塑化</td>
+                                                      <td align="right" class="ng-binding">0.96</td>
+                                                      <td align="right" class="ng-binding">5,241,458</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights --><tr ng-repeat="s in stkWeights" class="Table_text1 ng-scope even" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" ng-class="{true:'firstodd',false:'firsteven'}[$index%2 != 0]" class="ng-binding firstodd">9904</td>
+                                                      <td align="center" class="ng-binding">寶成</td>
+                                                      <td align="right" class="ng-binding">0.58</td>
+                                                      <td align="right" class="ng-binding">10,191,691</td>
+                                                    </tr><!-- end ngRepeat: s in stkWeights -->
+                                                  </tbody></table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                        <td width="25">&nbsp;</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- ngInclude:  --><div ng-include="" src="'./App/FundWarnings/Dash_Top.html'" class="ng-scope"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="ng-scope">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td width="10">&nbsp;</td>
+            <td width="10" align="right">
+                <a class="top" style="cursor:pointer">
+                    <img src="../Content/images/icon_TOP-mark.png" alt="" width="60" height="20" border="0">
+                </a>
+            </td>
+            <td width="10">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ng-scope">
+    <tbody>
+        <tr>
+            <td width="25">&nbsp;</td>
+            <td class="icon_Dashed">&nbsp;</td>
+            <td width="10">&nbsp;</td>
+        </tr>
+    </tbody>
+</table></div>
+                                </div><!-- end ngIf: stkWeights.length>0 && showStksWeight -->
+                                <!-- ngIf: etfWeights.length>0 -->
+                                <!-- ngIf: futWeights.length>0 --><div ng-if="futWeights.length>0" class="ng-scope">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                      <tr>
+                                        <td width="25">&nbsp;</td>
+                                        <td>
+                                          <table width="100%" class="tab-border" cellspacing="1" cellpadding="0">
+                                            <tbody>
+                                              <tr class="">
+                                                <td colspan="5" align="center" bgcolor="#f2e0d3" class="Table_MainTitle">
+                                                  期貨
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <table id="futureweights" cellspacing="0" cellpadding="4" border="1" style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+                                                    <tbody><tr class="table_Minortitle2">
+                                                      <td width="15%" bgcolor="#7A6B5F">期貨代碼</td>
+                                                      <td width="30%" bgcolor="#7A6B5F">期貨名稱</td>
+                                                      <td width="20%" bgcolor="#7A6B5F">持股權重(%)</td>
+                                                      <td width="20%" bgcolor="#7A6B5F">口數</td>
+                                                      <td width="15%" bgcolor="#7A6B5F">契約年月</td>
+                                                    </tr>
+                                                    <!-- ngRepeat: f in futWeights --><tr ng-repeat="f in futWeights" class="Table_text1 ng-scope odd" ng-class-odd="'odd'" ng-class-even="'even'">
+                                                      <td align="center" class="ng-binding">TX</td>
+                                                      <td align="center" class="ng-binding">台指期貨</td>
+                                                      <td align="right" class="ng-binding">0.50</td>
+                                                      <td align="right" class="ng-binding">150</td>
+                                                      <td align="center" class="ng-binding">201906</td>
+                                                    </tr><!-- end ngRepeat: f in futWeights -->
+                                                  </tbody></table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                        <td width="25">&nbsp;</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- ngInclude:  --><div ng-include="" src="'./App/FundWarnings/Dash_Top.html'" class="ng-scope"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="ng-scope">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td width="10">&nbsp;</td>
+            <td width="10" align="right">
+                <a class="top" style="cursor:pointer">
+                    <img src="../Content/images/icon_TOP-mark.png" alt="" width="60" height="20" border="0">
+                </a>
+            </td>
+            <td width="10">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ng-scope">
+    <tbody>
+        <tr>
+            <td width="25">&nbsp;</td>
+            <td class="icon_Dashed">&nbsp;</td>
+            <td width="10">&nbsp;</td>
+        </tr>
+    </tbody>
+</table></div>
+                                </div><!-- end ngIf: futWeights.length>0 -->
+                                <!-- ngIf: bondWeights.length!=0 -->
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td><img src="./Content/images/10_10.png" alt="" width="10" height="10"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td width="25" valign="middle" class="">
+                                        <p>
+                                          <br>
+                                          <br>
+                                        </p>
+                                      </td>
+                                      <td align="left" valign="middle" text-justify="newspaper">
+                                        <p class="YText4">
+                                          ＊欲進一步了解ETF申購與買回機制及相關實務知識，請至<a href="0401.html">法人專區</a>。
+                                        </p>
+                                      </td>
+                                      <td width="25" valign="middle">
+                                        <p>&nbsp;</p>
+                                        <p>&nbsp;</p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" class="ContactUS">
+                                        <a href="https://www.yuantafunds.com/service-center/contact-us">如有相關問題歡迎聯絡我們</a>
+                                        <span style="padding: 10px; font-weight: bold; text-align: center"></span>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
